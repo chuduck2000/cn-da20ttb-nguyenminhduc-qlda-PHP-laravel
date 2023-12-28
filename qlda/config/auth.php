@@ -40,6 +40,21 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+
+        'giangvien' => [
+            'driver' => 'session',
+            'provider' => 'giangviens',
+        ],
+
+        'sinhvien' => [
+            'driver' => 'session',
+            'provider' => 'sinhviens',
+        ],
     ],
 
     /*
@@ -65,10 +80,20 @@ return [
             'model' => App\Models\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
+        ],
+
+        'giangviens' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Giangvien::class,
+        ],
+
+        'sinhviens' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Sinhvien::class,
+        ],
     ],
 
     /*
